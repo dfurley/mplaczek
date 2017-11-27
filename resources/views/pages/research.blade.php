@@ -1,5 +1,7 @@
 @extends('layout')
 
 @section ('content')
-	Research
+	
+		<h2>Research</h2>
+	
 @endsection
