@@ -1,3 +1,5 @@
 @extends('layout')
 
-Contact
+@section ('content')
+	Contact
+@endsection

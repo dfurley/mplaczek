@@ -1,3 +1,5 @@
 @extends('layout')
 
-People
+@section ('content')
+	People
+@endsection

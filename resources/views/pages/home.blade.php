@@ -1,3 +1,5 @@
 @extends ('layout')
 
-Home
+@section ('content')
+	Home
+@endsection
