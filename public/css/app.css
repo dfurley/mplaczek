@@ -31,7 +31,7 @@ body {
 	margin-bottom: 10px;
 }
 
-.navbar-nav > li > a {
+.navbar-nav, .navbar-light > li > a {
 	color: #cccccc;
   &:hover {
     color: #008080;
