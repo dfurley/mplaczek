@@ -1,3 +1,40 @@
-h1, h2, h3, p {
-	font-family: 'Roboto Condensed', sans-serif;
+h1, h2, h3, h4, h5, h6, p, .banner {
+	font-family: 'Quicksand', sans-serif;
+	color: #cccccc;
+}
+
+.banner {
+	font-size: 50px;
+	font-weight: 300;
+}
+
+.banner-img {
+	margin-top: 15px;
+	margin-right: 10px;
+	height: 50px;
+}
+
+body {
+  background: black;
+  margin-bottom: 60px;
+ }
+
+ .navbar, .banner-bg {
+ background: #000000;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to right, #262626, #0d0d0d);  /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to right, #262626, #0d0d0d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ font-family: 'Quicksand', sans-serif;
+ border: none;
+}
+
+.navbar {
+	margin-bottom: 10px;
+}
+
+.navbar-nav > li > a {
+	color: #cccccc;
+  &:hover {
+    color: #008080;
+    opacity: 0.75;
+  }
 }
