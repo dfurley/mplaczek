@@ -15,6 +15,8 @@
 
 	@include('layouts.nav')
 	
+	@yield('image')
+
 	<div class="container">
 		<div class="col-md-10 offset-md-1">
 			@yield('content')
