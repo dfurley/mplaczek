@@ -12,7 +12,7 @@
 </head>
 <body>
 	@include('layouts.banner')
-
+	
 	@include('layouts.nav')
 	
 	@yield('image')
