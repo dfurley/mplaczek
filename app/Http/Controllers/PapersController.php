@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Paper;
 
 class PapersController extends Controller
 {
@@ -18,15 +19,8 @@ class PapersController extends Controller
 
     public function store()
     {
-    	//create new paper using form request data
-    	$paper = new \App\Paper;
+    	Paper::create(request(['authors', 'title', 'publication']));
 
-    	$paper->authors = request('authors');
-    	$paper->title = request('title');
-    	$paper->publication = request('publication');
-
-    	//save to database
-    	$paper->save();
 
     	//redirect to papers
     	return redirect('/papers');
