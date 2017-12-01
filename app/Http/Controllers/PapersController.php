@@ -7,6 +7,11 @@ use App\Paper;
 
 class PapersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index']);
+    }
+
     public function index()
     {
     	$papers = Paper::latest()->get();
@@ -27,7 +32,11 @@ class PapersController extends Controller
             'publication' => 'required'
         ]);
 
-        Paper::create(request(['authors', 'title', 'publication']));
+        Paper::create([
+            'authors' => request('authors'), 
+            'title' => request('title'), 
+            'publication' => request('publication'),
+        ]);
 
     	//redirect to papers
     	return redirect('/papers');
