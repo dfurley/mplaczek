@@ -9,7 +9,9 @@ class PapersController extends Controller
 {
     public function index()
     {
-    	return view('papers.index');
+    	$papers = Paper::latest()->get();
+
+        return view('papers.index', compact('papers'));
     }
 
     public function create()
@@ -19,8 +21,13 @@ class PapersController extends Controller
 
     public function store()
     {
-    	Paper::create(request(['authors', 'title', 'publication']));
+    	$this->validate(request(), [
+            'authors' => 'required',
+            'title' => 'required',
+            'publication' => 'required'
+        ]);
 
+        Paper::create(request(['authors', 'title', 'publication']));
 
     	//redirect to papers
     	return redirect('/papers');

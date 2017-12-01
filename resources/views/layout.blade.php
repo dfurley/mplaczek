@@ -18,7 +18,7 @@
 	@yield('image')
 
 	<div class="container">
-		<div class="col-md-10 offset-md-1">
+		<div class="col-md-8 offset-md-2">
 			@yield('content')
 		</div>
 	</div>

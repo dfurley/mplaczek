@@ -1,5 +1,5 @@
 @extends('layout')
-<link rel="stylesheet" href="/css/research.css">
+<link rel="stylesheet" href="/css/papers.css">
 
 @section ('image')
 	<div class="banner">
@@ -11,7 +11,14 @@
 	</div>
 @endsection
 @section ('content')
-	<div class="content">
-		<h2>Research</h2>
+	<div class="col-md-8 offset-md-2">
+		<div class="content">
+			<p>Google scholar profile</p>
+			<br>
+			<br>
+			@foreach($papers as $paper)
+				@include('papers.paper')
+			@endforeach
+		</div>
 	</div>
 @endsection

@@ -12,7 +12,9 @@
 	</div>
 @endsection
 @section ('content')
-	<div class="content">
-		<h2>People</h2>
+	<div class="col-md-8 offset-md-2">
+		<div class="content">
+			<h2>People</h2>
+		</div>
 	</div>
 @endsection

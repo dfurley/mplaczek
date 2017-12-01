@@ -15,6 +15,7 @@ class CreatePapersTable extends Migration
     {
         Schema::create('papers', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
             $table->string('authors');
             $table->string('title');
             $table->string('publication');
