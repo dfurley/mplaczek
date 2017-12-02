@@ -41,4 +41,11 @@ class PapersController extends Controller
     	//redirect to papers
     	return redirect('/papers');
     }
+
+    public function destroy($id)
+    {
+        paper::find($id)->delete();
+
+        return redirect('/papers');
+    }
 }

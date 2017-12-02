@@ -14,8 +14,12 @@
 	<div class="col-md-8 offset-md-2">
 		<div class="content">
 			<p>Google scholar profile</p>
-			<br>
-			<br>
+			@if (Auth::check())
+				<h2>
+					<a href="/papers/upload">Upload new paper</a>
+				</h2>
+				<br>
+	      	@endif
 			@foreach($papers as $paper)
 				@include('papers.paper')
 			@endforeach
