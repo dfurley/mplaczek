@@ -33,12 +33,13 @@
 	        <a class="nav-link" href="/contact">Contact</a>
 	      </li>
 
-	      @if (Auth::check())
+	    </ul>
+	    <ul class="navbar-nav ml-auto">
+	    	 @if (Auth::check())
 			<li class="nav-item">
 				<a href="/logout" class="nav-link ml-auto">Logout</a>
 			</li>
 	      @endif
-
 	    </ul>
 	  </div>
 	</div>
