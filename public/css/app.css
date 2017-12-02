@@ -1,8 +1,8 @@
-h1, h2, h3, h4, h5, h6, p, .banner {
+h1, h2, h3, h4, h5, h6, p, .banner, .list {
 	font-family: 'Quicksand', sans-serif;
 	color: #cccccc;
 	font-weight: 300;
-}
+} 
 
 h6 {
 	font-size: 15px;

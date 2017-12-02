@@ -13,10 +13,18 @@
 @endsection
 @section ('content')
 	<div class="content">
-		<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-		<br>
-		<br>
-		The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+		<p>
+			<strong class="paper-title">We study how the hypothalamus of the brain is formed in the embryo.</strong> In development,
+			hypothalamic nerves and glia are built in space and time with an order and precision that leads
+			ultimately to the integrated assembly of the brain-body axis. The proper development of the
+			hypothalamus is therefore vital to ensure that throughout life, brain and body function in
+			perfect harmony and balance. Our research focuses on the stem and progenitor cells that
+			build the hypothalamus. Our goal is to characterise the molecular networks involved in
+			hypothalamic development, and determine how they work to build and maintain the different
+			cells of the hypothalamus. Our work will contribute to understanding the importance of the
+			hypothalamus to robust long-term health and will shed light onto diseases and disruptions of
+			homeostasis.
+		</p>
 	</div>
 	
 @endsection
