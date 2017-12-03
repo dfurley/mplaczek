@@ -14,9 +14,9 @@
 @section ('content')
 	<div class="col-md-8 offset-md-2">
 		<div class="content">
-			<h6>The Placzek Lab is based at The University of Sheffield.</h6>
+			<h6>The Placzek Lab is based at the Bateson Centre and Dept of Biomedical Science at The University of Sheffield.</h6>
 			<br>
-			<h6>+44 XXX-XXX-XXXX (Lab)</h6>
+			<h6>+44 114-222-2353 (Lab)</h6>
 			<br>
 			<h6>
 				<strong class="paper-title">Principle investigator - </strong><br>
@@ -24,12 +24,8 @@
 			</h6>
 			<br>
 			<h6>
-				<strong class="paper-title">Admin assistant - </strong><br>
-				Email: example@example.com
-			</h6>
-			<br>
-			<h6>
-				The University of Sheffield <br>
+				Bateson Centre <br>
+				Dept. Biomedical Science <br>
 				Western Bank <br>
 				Sheffield <br>
 				S10 2TN
