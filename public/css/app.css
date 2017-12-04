@@ -60,3 +60,7 @@ body {
 .page-content {
 	margin-bottom: 200px;
 }
+
+.muted {
+	opacity: 50%;
+}

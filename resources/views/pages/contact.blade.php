@@ -20,7 +20,7 @@
 			<br>
 			<h6>
 				<strong class="paper-title">Principle investigator - </strong><br>
-				Email: m.placzek@sheffield.ac.uk
+				Email: <a href="mailto:m.placzek@sheffield.ac.uk">m.placzek@sheffield.ac.uk</a>
 			</h6>
 			<br>
 			<h6>

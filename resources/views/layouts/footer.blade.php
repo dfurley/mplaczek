@@ -1,5 +1,16 @@
 <footer class="footer">
   <div class="container">
-    <span class="text-muted">Place sticky footer content here.</span>
+    <div class="row">
+      <div class="col">
+        <h6 class="footer-2">
+          <a href="/login">Admin Login</a>
+        </h6>
+      </div>
+      <div class="col text-right">
+        <h6 class="footer-1">
+          <a href="#">Website created by David Furley</a>
+        </h6>
+      </div>
+    </div>
   </div>
-</footer>
+</footer> 
