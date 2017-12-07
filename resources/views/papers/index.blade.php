@@ -13,7 +13,7 @@
 @section ('content')
 	<div class="col-md-8 offset-md-2">
 		<div class="content">
-			<p>Orchid ID - <a href="#">XXX-XXX-XXXX</a></p>
+			<p>Orchid ID - <a href="//orcid.org/0000-0002-4106-9229">0000-0002-4106-9229</a></p>
 			@if (Auth::check())
 				<h2>
 					<a href="/papers/upload">Upload new paper</a>
