@@ -13,9 +13,7 @@ return [
     |
     */
 
-    // Use if postgres doesn't work
-    // 'default' => env('DB_CONNECTION', 'mysql'),
-    'default' => 'pgsql', 
+    'default' => env('DB_CONNECTION', 'mysql'), 
 
     /*
     |--------------------------------------------------------------------------
@@ -58,15 +56,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            // 'host' => env('DB_HOST', '127.0.0.1'),
-            'host' => parse_url(getenv("postgres://beheuxzuzvikfi:f066037718c7dac4add6695d926cdcbbca953ecf93df6fc5aba08b8f523820d0@ec2-54-204-13-130.compute-1.amazonaws.com:5432/d1ingdkhati8lt"))["host"],
-            // 'port' => env('DB_PORT', '5432'),
-            // 'database' => env('DB_DATABASE', 'forge'),
-            'database' => substr(parse_url(getenv("postgres://beheuxzuzvikfi:f066037718c7dac4add6695d926cdcbbca953ecf93df6fc5aba08b8f523820d0@ec2-54-204-13-130.compute-1.amazonaws.com:5432/d1ingdkhati8lt"))["path"], 1),
-            // 'username' => env('DB_USERNAME', 'forge'),
-            'username' => parse_url(getenv("postgres://beheuxzuzvikfi:f066037718c7dac4add6695d926cdcbbca953ecf93df6fc5aba08b8f523820d0@ec2-54-204-13-130.compute-1.amazonaws.com:5432/d1ingdkhati8lt"))["user"],
-            // 'password' => env('DB_PASSWORD', ''),
-            'password' => parse_url(getenv("postgres://beheuxzuzvikfi:f066037718c7dac4add6695d926cdcbbca953ecf93df6fc5aba08b8f523820d0@ec2-54-204-13-130.compute-1.amazonaws.com:5432/d1ingdkhati8lt"))["pass"],
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
