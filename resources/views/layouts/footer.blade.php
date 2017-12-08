@@ -2,9 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h6 class="footer-2">
-          <a href="/login">Admin Login</a>
-        </h6>
+        @if (Auth::guest())
+          <h6 class="footer-2">
+            <a href="/login">Admin Login</a>
+          </h6>
+        @endif
       </div>
       <div class="col text-right">
         <h6 class="footer-1">
