@@ -7,6 +7,7 @@
 		{{ $paper->publication }}
 		<br>
 		@if (Auth::check())
+			<a href="{{URL::to('/papers/edit/'.$paper->id) }}";">Edit</a> -
 			<a href="{{URL::to('/deletepaper/'.$paper->id) }}" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
 		@endif
 	</p>

@@ -9,6 +9,8 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/papers', 'PapersController@index');
 Route::get('/papers/upload', 'PapersController@create');
 Route::post('/papers', 'PapersController@store');
+Route::get('/papers/edit/{paper}', 'PapersController@edit');
+Route::patch('/papers/{paper}', 'PapersController@update');
 Route::get('/deletepaper/{paper}', 'PapersController@destroy');
 
 Route::get('/FVAkC2jDFu', 'RegistrationController@create');
