@@ -24,12 +24,16 @@ class StaffController extends Controller
 
     public function current()
     {
-        return view ('staff.current');
+        $staff = Staff::latest()->where('current/past', '=', 'current')->get();
+
+        return view ('staff.current', compact('staff'));
     }
 
     public function past()
     {
-        return view ('staff.past');
+        $staff = Staff::latest()->where('current/past', '=', 'past')->get();
+
+        return view ('staff.past', compact('staff'));
     }
     /**
      * Show the form for creating a new resource.
@@ -57,7 +61,7 @@ class StaffController extends Controller
             'current/past' => 'required'
         ]);
 
-        //creates new paper in database
+        //creates new staff object in database
         Staff::create([
             'name' => request('name'), 
             'position' => request('position'), 
@@ -65,7 +69,7 @@ class StaffController extends Controller
             'current/past' => request('current/past'),
         ]);
 
-        //redirect to papers index
+        //redirect to current staff 
         return redirect('/staff/current');
     }
 
@@ -86,9 +90,10 @@ class StaffController extends Controller
      * @param  \App\staff  $staff
      * @return \Illuminate\Http\Response
      */
-    public function edit(staff $staff)
+    public function edit($id)
     {
-        //
+        $staff = staff::findOrFail($id);
+        return view('staff.edit') -> with('staff', $staff);
     }
 
     /**
@@ -98,9 +103,20 @@ class StaffController extends Controller
      * @param  \App\staff  $staff
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, staff $staff)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate(request(), [
+            'name' => 'required',
+            'position' => 'required',
+            'email' => 'required|email',
+            'current/past' => 'required'
+        ]);
+
+        //update staff object in database
+        Staff::where('id', $id)->update($request->except(['_token', '_method']));
+
+        //redirect to current staff
+        return redirect('staff/current');
     }
 
     /**
@@ -109,8 +125,10 @@ class StaffController extends Controller
      * @param  \App\staff  $staff
      * @return \Illuminate\Http\Response
      */
-    public function destroy(staff $staff)
+    public function destroy($id)
     {
-        //
+        staff::find($id)->delete();
+
+        return redirect('staff/current');
     }
 }

@@ -22,3 +22,6 @@ Route::get('/staff/current', 'StaffController@current');
 Route::get('/staff/past', 'StaffController@past');
 Route::get('staff/create', 'StaffController@create');
 Route::post('staff', 'StaffController@store');
+Route::get('/staff/edit/{staff}', 'StaffController@edit');
+Route::patch('staff/{staff}', 'StaffController@update');
+Route::get('deletestaff/{staff}', 'StaffController@destroy');

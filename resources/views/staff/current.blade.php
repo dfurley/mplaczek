@@ -14,32 +14,33 @@
 @section ('content')
 	<div class="col-md-8 offset-md-2">
 		<div class="content">
+			
 			@if (Auth::check())
 				<h2>
 					<a href="/staff/create">Add new staff member</a>
 				</h2>
 				<br>
 	      	@endif
+
 			<p>
 				<strong class="paper-title">Marysia Placzek</strong><br>
 				Group Leader<br>
 				<a href="mailto:m.placzek@sheffield.ac.uk">m.placzek@sheffield.ac.uk</a>
 			</p>
-			<p>
-				<strong class="paper-title">Sarah Brown</strong><br>
-				PhD Student<br>
-				<a href="mailto:sjbrown1@sheffield.ac.uk">sjbrown1@sheffield.ac.uk</a>
-			</p>
-			<p>
-				<strong class="paper-title">Alex Moore</strong><br>
-				PhD Student<br>
-				<a href="mailto:amoore1@sheffield.ac.uk">amoore1@sheffield.ac.uk</a>
-			</p>
-			<p>
-				<strong class="paper-title">Aragorn Jones</strong><br>
-				PhD Student<br>
-				<a href="mailto:ajjones1@sheffield.ac.uk">ajjones1@sheffield.ac.uk</a>
-			</p>
+			
+			@foreach($staff as $member)
+				<p>
+					<strong class="paper-title">{{ $member->name }}</strong><br>
+					{{ $member->position }}<br>
+					<a href="mailto:{{ $member->email }}">{{ $member->email }}</a>
+					<br>
+					@if (Auth::check())
+						<a href="{{URL::to('/staff/edit/'.$member->id) }}";">Edit</a> -
+						<a href="{{URL::to('/deletestaff/'.$member->id) }}" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
+					@endif
+				</p>
+			@endforeach
+
 		</div>
 	</div>
 @endsection
