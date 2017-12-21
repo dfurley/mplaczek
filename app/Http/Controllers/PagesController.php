@@ -16,16 +16,6 @@ class PagesController extends Controller
     	return view ('pages.research');
     }
 
-    public function current()
-    {
-    	return view ('pages.current');
-    }
-
-    public function past()
-    {
-    	return view ('pages.past');
-    }
-
     public function contact()
     {
     	return view ('pages.contact');

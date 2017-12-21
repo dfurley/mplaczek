@@ -14,6 +14,12 @@
 @section ('content')
 	<div class="col-md-8 offset-md-2">
 		<div class="content">
+			@if (Auth::check())
+				<h2>
+					<a href="/staff/create">Add new staff member</a>
+				</h2>
+				<br>
+	      	@endif
 			<p>
 				<strong class="paper-title">Sarah Burbridge</strong><br>
 				Research Technician, Whitfield lab. University of Sheffield<br>

@@ -20,8 +20,8 @@
 	          People
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="/current_members">Current Lab Members</a>
-	          <a class="dropdown-item" href="/past_members">Past Lab Members</a>
+	          <a class="dropdown-item" href="/staff/current">Current Lab Members</a>
+	          <a class="dropdown-item" href="/staff/past">Past Lab Members</a>
 	        </div>
 	      </li>
 
